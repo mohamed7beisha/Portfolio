@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="imgs/favicon.ico" type="image/x-icon" media="(prefers-color-scheme: light)">
+        <link rel="icon" href="imgs/favicon.ico" type="image/x-icon" media="(prefers-color-scheme: dark)">
+
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/projects.css">
+        <link rel="stylesheet" href="css/contact.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+        <meta name="description" content="Mohamed Ashraf - Full Stack Web Developer Portfolio. Showcasing skills, projects, and contact information.">
+        <meta name="keywords" content="Full Stack Developer, Web Developer, Django, React, Python, Mohamed Ashraf, Portfolio">
+        <meta name="author" content="Mohamed Ashraf">
+        <title>Mohamed Ashraf</title>
+    </head>
+    <body>
+
+        <header class="topbar">
+
+            <svg id="menu-icon" class="mobile-menu-icon active" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_iconCarrier">
+                    <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+            </svg>
+
+            <svg id="exit-menu" class="exit-menu" viewBox="-3.5 0 19 19" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_iconCarrier">
+                    <path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z"></path>
+                </g>
+            </svg>
+
+            <nav class="navbar" aria-label="Main Navigation">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="theme-toggle" id="theme-toggle">
+                <svg id="light-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_iconCarrier">
+                        <path d="M18 12C18 15.3137 15.3137 18 12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12Z" fill="#1C274C"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1.25C12.4142 1.25 12.75 1.58579 12.75 2V3C12.75 3.41421 12.4142 3.75 12 3.75C11.5858 3.75 11.25 3.41421 11.25 3V2C11.25 1.58579 11.5858 1.25 12 1.25ZM4.39861 4.39861C4.6915 4.10572 5.16638 4.10572 5.45927 4.39861L5.85211 4.79145C6.145 5.08434 6.145 5.55921 5.85211 5.85211C5.55921 6.145 5.08434 6.145 4.79145 5.85211L4.39861 5.45927C4.10572 5.16638 4.10572 4.6915 4.39861 4.39861ZM19.6011 4.39887C19.894 4.69176 19.894 5.16664 19.6011 5.45953L19.2083 5.85237C18.9154 6.14526 18.4405 6.14526 18.1476 5.85237C17.8547 5.55947 17.8547 5.0846 18.1476 4.79171L18.5405 4.39887C18.8334 4.10598 19.3082 4.10598 19.6011 4.39887ZM1.25 12C1.25 11.5858 1.58579 11.25 2 11.25H3C3.41421 11.25 3.75 11.5858 3.75 12C3.75 12.4142 3.41421 12.75 3 12.75H2C1.58579 12.75 1.25 12.4142 1.25 12ZM20.25 12C20.25 11.5858 20.5858 11.25 21 11.25H22C22.4142 11.25 22.75 11.5858 22.75 12C22.75 12.4142 22.4142 12.75 22 12.75H21C20.5858 12.75 20.25 12.4142 20.25 12ZM18.1476 18.1476C18.4405 17.8547 18.9154 17.8547 19.2083 18.1476L19.6011 18.5405C19.894 18.8334 19.894 19.3082 19.6011 19.6011C19.3082 19.894 18.8334 19.894 18.5405 19.6011L18.1476 19.2083C17.8547 18.9154 17.8547 18.4405 18.1476 18.1476ZM5.85211 18.1479C6.145 18.4408 6.145 18.9157 5.85211 19.2086L5.45927 19.6014C5.16638 19.8943 4.6915 19.8943 4.39861 19.6014C4.10572 19.3085 4.10572 18.8336 4.39861 18.5407L4.79145 18.1479C5.08434 17.855 5.55921 17.855 5.85211 18.1479ZM12 20.25C12.4142 20.25 12.75 20.5858 12.75 21V22C12.75 22.4142 12.4142 22.75 12 22.75C11.5858 22.75 11.25 22.4142 11.25 22V21C11.25 20.5858 11.5858 20.25 12 20.25Z" fill="#1C274C"></path>
+                    </g>
+                </svg>
+                <svg id="dark-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_iconCarrier">
+                        <path d="M19.9001 2.30719C19.7392 1.8976 19.1616 1.8976 19.0007 2.30719L18.5703 3.40247C18.5212 3.52752 18.4226 3.62651 18.298 3.67583L17.2067 4.1078C16.7986 4.26934 16.7986 4.849 17.2067 5.01054L18.298 5.44252C18.4226 5.49184 18.5212 5.59082 18.5703 5.71587L19.0007 6.81115C19.1616 7.22074 19.7392 7.22074 19.9001 6.81116L20.3305 5.71587C20.3796 5.59082 20.4782 5.49184 20.6028 5.44252L21.6941 5.01054C22.1022 4.849 22.1022 4.26934 21.6941 4.1078L20.6028 3.67583C20.4782 3.62651 20.3796 3.52752 20.3305 3.40247L19.9001 2.30719Z" fill="#1C274C"></path>
+                        <path d="M16.0328 8.12967C15.8718 7.72009 15.2943 7.72009 15.1333 8.12967L14.9764 8.52902C14.9273 8.65407 14.8287 8.75305 14.7041 8.80237L14.3062 8.95987C13.8981 9.12141 13.8981 9.70107 14.3062 9.86261L14.7041 10.0201C14.8287 10.0694 14.9273 10.1684 14.9764 10.2935L15.1333 10.6928C15.2943 11.1024 15.8718 11.1024 16.0328 10.6928L16.1897 10.2935C16.2388 10.1684 16.3374 10.0694 16.462 10.0201L16.8599 9.86261C17.268 9.70107 17.268 9.12141 16.8599 8.95987L16.462 8.80237C16.3374 8.75305 16.2388 8.65407 16.1897 8.52902L16.0328 8.12967Z" fill="#1C274C"></path>
+                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 11.5373 21.3065 11.4608 21.0672 11.8568C19.9289 13.7406 17.8615 15 15.5 15C11.9101 15 9 12.0899 9 8.5C9 6.13845 10.2594 4.07105 12.1432 2.93276C12.5392 2.69347 12.4627 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#1C274C"></path>
+                    </g>
+                </svg>
+            </div>
+
+        </header>
+
+        <main class="snap-wrapper">
+
+            <!-- <section class="content home" id="home">
+                <svg class="home-bg" viewBox="0 0 900 600" preserveAspectRatio="xMidYMid slice">
+                    <rect class="peak1" x="0" y="0" width="900" height="600" fill="#001220"></rect>
+                    <path class="peak2" d="M407 600L422.5 585.7C438 571.3 469 542.7 480.5 514.2C492 485.7 484 457.3 469.5 428.8C455 400.3 434 371.7 450.2 343C466.3 314.3 519.7 285.7 541.8 257C564 228.3 555 199.7 531.5 171.2C508 142.7 470 114.3 462 85.8C454 57.3 476 28.7 487 14.3L498 0L900 0L900 14.3C900 28.7 900 57.3 900 85.8C900 114.3 900 142.7 900 171.2C900 199.7 900 228.3 900 257C900 285.7 900 314.3 900 343C900 371.7 900 400.3 900 428.8C900 457.3 900 485.7 900 514.2C900 542.7 900 571.3 900 585.7L900 600Z"></path>
+                    <path class="peak3" d="M603 600L620.5 585.7C638 571.3 673 542.7 684.3 514.2C695.7 485.7 683.3 457.3 670.2 428.8C657 400.3 643 371.7 633.3 343C623.7 314.3 618.3 285.7 620.8 257C623.3 228.3 633.7 199.7 625.3 171.2C617 142.7 590 114.3 594 85.8C598 57.3 633 28.7 650.5 14.3L668 0L900 0L900 14.3C900 28.7 900 57.3 900 85.8C900 114.3 900 142.7 900 171.2C900 199.7 900 228.3 900 257C900 285.7 900 314.3 900 343C900 371.7 900 400.3 900 428.8C900 457.3 900 485.7 900 514.2C900 542.7 900 571.3 900 585.7L900 600Z"></path>
+                    <path class="peak4" d="M788 600L784.2 585.7C780.3 571.3 772.7 542.7 773 514.2C773.3 485.7 781.7 457.3 773.5 428.8C765.3 400.3 740.7 371.7 737.3 343C734 314.3 752 285.7 759.7 257C767.3 228.3 764.7 199.7 759.5 171.2C754.3 142.7 746.7 114.3 753.3 85.8C760 57.3 781 28.7 791.5 14.3L802 0L900 0L900 14.3C900 28.7 900 57.3 900 85.8C900 114.3 900 142.7 900 171.2C900 199.7 900 228.3 900 257C900 285.7 900 314.3 900 343C900 371.7 900 400.3 900 428.8C900 457.3 900 485.7 900 514.2C900 542.7 900 571.3 900 585.7L900 600Z"></path>
+                </svg>
+                <svg class="mobile-home-bg" viewBox="0 0 675 900" preserveAspectRatio="xMidYMid slice">
+                    <rect class="peak1" x="0" y="0" width="675" height="900" fill="#001220"></rect>
+                    <path class="peak2" d="M0 477L16 469.2C32 461.3 64 445.7 96.2 440C128.3 434.3 160.7 438.7 192.8 458.7C225 478.7 257 514.3 289.2 515.5C321.3 516.7 353.7 483.3 385.8 474.5C418 465.7 450 481.3 482.2 483C514.3 484.7 546.7 472.3 578.8 475.7C611 479 643 498 659 507.5L675 517L675 901L659 901C643 901 611 901 578.8 901C546.7 901 514.3 901 482.2 901C450 901 418 901 385.8 901C353.7 901 321.3 901 289.2 901C257 901 225 901 192.8 901C160.7 901 128.3 901 96.2 901C64 901 32 901 16 901L0 901Z" fill="#fa7268"></path>
+                    <path class="peak3" d="M0 657L16 639.7C32 622.3 64 587.7 96.2 574.8C128.3 562 160.7 571 192.8 587.2C225 603.3 257 626.7 289.2 639.5C321.3 652.3 353.7 654.7 385.8 641.7C418 628.7 450 600.3 482.2 606.3C514.3 612.3 546.7 652.7 578.8 667.5C611 682.3 643 671.7 659 666.3L675 661L675 901L659 901C643 901 611 901 578.8 901C546.7 901 514.3 901 482.2 901C450 901 418 901 385.8 901C353.7 901 321.3 901 289.2 901C257 901 225 901 192.8 901C160.7 901 128.3 901 96.2 901C64 901 32 901 16 901L0 901Z" fill="#e34c67"></path>
+                    <path class="peak4" d="M0 747L16 751.5C32 756 64 765 96.2 766.5C128.3 768 160.7 762 192.8 758.8C225 755.7 257 755.3 289.2 744.2C321.3 733 353.7 711 385.8 714.2C418 717.3 450 745.7 482.2 754.7C514.3 763.7 546.7 753.3 578.8 758.2C611 763 643 783 659 793L675 803L675 901L659 901C643 901 611 901 578.8 901C546.7 901 514.3 901 482.2 901C450 901 418 901 385.8 901C353.7 901 321.3 901 289.2 901C257 901 225 901 192.8 901C160.7 901 128.3 901 96.2 901C64 901 32 901 16 901L0 901Z" fill="#c62368"></path>
+                </svg>
+
+                <h1 class="intro-header">
+                    <span class="intro-hello">Hello</span>
+                    <span class="intro-name">I'm <span>Mohamed Ashraf</span></span>
+                    <span class="intro-title">Full Stack Developer</span>
+                </h1>
+
+                <div class="intro-buttons">
+                    <a href="#about" id="about-me-btn" aria-label="Learn more about Mohamed Ashraf">About Me</a>
+                    <a href="#contact" id="contact-btn" aria-label="Get in touch with Mohamed Ashraf">Get in touch</a>
+                </div>
+            </section>
+
+            <section class="content about" id="about">
+                <h2 class="about-title">About Me</h2>
+                <p class="about-paragraph">
+                    I'm Mohamed Ashraf Ramadan,<br>
+                    An ambitious and creative web developer who pays attention to every detail,<br>
+                    even the smallest ones, and listens carefully to client needs.<br>
+                    I can turn any idea in your mind into a simple, user-friendly website,<br>
+                    built with clean, clear code that’s easy to maintain and improve in the future.
+                </p>
+
+                <button id="projects-btn">
+                    <a href="#projects">View Projects</a>
+
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M32.3535 32.3536L15.3535 15.3536" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M32.3535 14.3535V32.3535H14.3535" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </svg>
+                </button>
+
+                <h1 class="skills-title">Skills</h1>
+
+                <ul class="skill-list">
+                    <li class="skill-item python">Python</li>
+                    <li class="skill-item django">Django</li>
+                    <li class="skill-item flask">Flask</li>
+                    <li class="skill-item api">APIs</li>
+                    <li class="skill-item mysql">MySQL</li>
+                    <li class="skill-item sqlite">SQLite</li>
+                    <li class="skill-item html">HTML</li>
+                    <li class="skill-item css">CSS</li>
+                    <li class="skill-item tailwind">Tailwind CSS</li>
+                    <li class="skill-item javascript">JavaScript</li>
+                    <li class="skill-item react">React</li>
+                    <li class="skill-item github">GitHub</li>
+                </ul>
+            </section> -->
+
+            <section class="content projects" id="projects">
+
+                <div class="project-slider" id="projectSlider">
+
+                    <div class="project-container">
+                        <div class="mockup-container">
+                            <img class="mockup" src="imgs/redbull.png" alt="redbull preview">
+                        </div>
+                        <h2 class="project-title">Redbull Cards</h2>
+                        <p class="project-description">A web app for playing and solving Sudoku puzzles.</p>
+                        <div class="project-tech">
+                            <span class="tech-item react">React</span>
+                            <span class="tech-item javascript">JavaScript</span>
+                            <span class="tech-item css">CSS</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a class="project-link" href="https://github.com/mohamed7beisha/RedBull" target="_blank">
+                                <svg viewBox="0 -960 960 960">
+                                    <path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/>
+                                </svg>
+                                <p>View on GitHub</p>
+                            </a>
+                            <a class="project-link" href="https://redbullcards.netlify.app/" target="_blank">
+                                <p>View Website</p>
+                                <svg viewBox="0 -960 960 960">
+                                    <path d="M440-280H280q-83 0-141.5-58.5T80-480q0-83 58.5-141.5T280-680h160v80H280q-50 0-85 35t-35 85q0 50 35 85t85 35h160v80ZM320-440v-80h320v80H320Zm200 160v-80h160q50 0 85-35t35-85q0-50-35-85t-85-35H520v-80h160q83 0 141.5 58.5T880-480q0 83-58.5 141.5T680-280H520Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-container">
+                        <div class="mockup-container">
+                            <img class="mockup" src="imgs/booksvault.png" alt="BooksVault preview">
+                        </div>
+                        <h2 class="project-title">BooksVault</h2>
+                        <p class="project-description">A web application for managing and sharing books.</p>
+                        <div class="project-tech">
+                            <span class="tech-item django">Django</span>
+                            <span class="tech-item javascript">JavaScript</span>
+                            <span class="tech-item html">HTML</span>
+                            <span class="tech-item css">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="project-link" href="https://github.com/mohamed7beisha/BooksVault" target="_blank">
+                                <svg viewBox="0 -960 960 960">
+                                    <path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/>
+                                </svg>
+                                <p>View on GitHub</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-container">
+                        <div class="mockup-container">
+                            <img class="mockup" src="imgs/sudoku.png" alt="Sudoku preview">
+                        </div>
+                        <h2 class="project-title">Sudoku</h2>
+                        <p class="project-description">A web app for playing and solving Sudoku puzzles.</p>
+                        <div class="project-tech">
+                            <span class="tech-item javascript">JavaScript</span>
+                            <span class="tech-item html">HTML</span>
+                            <span class="tech-item css">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="project-link" href="https://github.com/mohamed7beisha/Sudoku" target="_blank">
+                                <svg viewBox="0 -960 960 960">
+                                    <path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/>
+                                </svg>
+                                <p>View on GitHub</p>
+                            </a>
+                            <a class="project-link" href="https://mohamed7beisha.github.io/Sudoku/" target="_blank">
+                                <p>View Website</p>
+                                <svg viewBox="0 -960 960 960">
+                                    <path d="M440-280H280q-83 0-141.5-58.5T80-480q0-83 58.5-141.5T280-680h160v80H280q-50 0-85 35t-35 85q0 50 35 85t85 35h160v80ZM320-440v-80h320v80H320Zm200 160v-80h160q50 0 85-35t35-85q0-50-35-85t-85-35H520v-80h160q83 0 141.5 58.5T880-480q0 83-58.5 141.5T680-280H520Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-container">
+                        <div class="mockup-container">
+                            <img class="mockup" src="imgs/unit-converter.png" alt="unit-converter">
+                        </div>
+                        <h2 class="project-title">Unit Converter</h2>
+                        <p class="project-description">Convert units of measurement easily.</p>
+                        <div class="project-tech">
+                            <span class="tech-item flask">Flask</span>
+                            <span class="tech-item html">HTML</span>
+                            <span class="tech-item css">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="project-link" href="https://github.com/mohamed7beisha/Unit-Converter" target="_blank">
+                                <svg viewBox="0 -960 960 960">
+                                    <path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/>
+                                </svg>
+                                <p>View on GitHub</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-container">
+                        <div class="mockup-container">
+                            <img class="mockup" src="imgs/drumkit.png" alt="drumkit">
+                        </div>
+                        <h2 class="project-title">Drum Kit</h2>
+                        <p class="project-description">Create and play drum sounds in the browser.</p>
+                        <div class="project-tech">
+                            <span class="tech-item javascript">JavaScript</span>
+                            <span class="tech-item html">HTML</span>
+                            <span class="tech-item css">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="project-link" href="https://github.com/mohamed7beisha/Drum-Kit" target="_blank">
+                                <svg viewBox="0 -960 960 960">
+                                    <path d="M320-240 80-480l240-240 57 57-184 184 183 183-56 56Zm320 0-57-57 184-184-183-183 56-56 240 240-240 240Z"/>
+                                </svg>
+                                <p>View on GitHub</p>
+                            </a>
+                            <a class="project-link" href="drumskitonline.netlify.app" target="_blank">
+                                <p>View Website</p>
+                                <svg viewBox="0 -960 960 960">
+                                    <path d="M440-280H280q-83 0-141.5-58.5T80-480q0-83 58.5-141.5T280-680h160v80H280q-50 0-85 35t-35 85q0 50 35 85t85 35h160v80ZM320-440v-80h320v80H320Zm200 160v-80h160q50 0 85-35t35-85q0-50-35-85t-85-35H520v-80h160q83 0 141.5 58.5T880-480q0 83-58.5 141.5T680-280H520Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-container">
+                        <div class="mockup-container">
+                            <img class="mockup" src="" alt="">
+                        </div>
+                        <h2 class="project-title">SVG Converter</h2>
+                        <p class="project-description">Create and play drum sounds in the browser.</p>
+                        <div class="project-tech">
+                            <span class="tech-item javascript">JavaScript</span>
+                            <span class="tech-item html">HTML</span>
+                            <span class="tech-item css">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="github-link" href="https://github.com/mohamed7beisha/Drum-Kit">GitHub link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <svg viewBox="0 0 24 24" id="prevBtn">
+                        <g>
+                            <path d="M14.2893 5.70708C13.8988 5.31655 13.2657 5.31655 12.8751 5.70708L7.98768 10.5993C7.20729 11.3805 7.2076 12.6463 7.98837 13.427L12.8787 18.3174C13.2693 18.7079 13.9024 18.7079 14.293 18.3174C14.6835 17.9269 14.6835 17.2937 14.293 16.9032L10.1073 12.7175C9.71678 12.327 9.71678 11.6939 10.1073 11.3033L14.2893 7.12129C14.6799 6.73077 14.6799 6.0976 14.2893 5.70708Z"></path>
+                        </g>
+                    </svg>
+
+                    <div class="indicators" id="indicators"></div>
+
+                    <svg viewBox="0 0 24 24" id="nextBtn">
+                        <g>
+                            <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z"></path>
+                         </g>
+                    </svg>
+                </div>
+
+            </section>
+
+            <section class="content contact" id="contact">
+
+                <div class="contact-wrapper">
+                    <header class="contact-header">
+                        <div class="contact-divider"></div>
+                        <h2 class="contact-heading">Contact</h2>
+                    </header>
+
+                    <div class="form-wrapper">
+                        <div>
+                            <h3 class="contact-title">Have a project in mind?</h3>
+                            <p class="contact-subtitle">Get in touch to build something together.</p>
+
+                            <form class="contact-form" action="https://formspree.io/f/xanbrzro" method="POST">
+                                <input class="contact-input" id="contact-name" name="name" type="text" placeholder="Name" required/>
+
+                                <input class="contact-input" id="contact-email" type="email" name="email" placeholder="Email" required/>
+
+                                <textarea class="contact-input" id="contact-message" name="message" placeholder="Message" required></textarea>
+
+                                <input class="contact-submit" type="submit" value="Send" />
+                            </form>
+
+                        </div>
+
+                        <div class="contact-svg">
+                            <svg id="blobSvg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <path id="blobPath" fill="#FF0066"
+                                        d="M38.8,-67.3C49.8,-60.9,57.8,-49.4,64.4,-37.4C71,-25.3,76.2,-12.7,77.9,1C79.6,14.6,77.9,29.3,71.1,41.1C64.4,52.9,52.6,61.8,39.9,65.3C27.2,68.7,13.6,66.6,0.4,65.9C-12.8,65.2,-25.7,66,-37.1,61.9C-48.6,57.7,-58.6,48.7,-65.5,37.6C-72.4,26.4,-76.2,13.2,-76.8,-0.4C-77.5,-14,-75.1,-28,-67.7,-38.3C-60.4,-48.6,-48,-55.3,-35.9,-61C-23.8,-66.8,-11.9,-71.7,1,-73.4C13.9,-75.2,27.9,-73.8,38.8,-67.3Z"
+                                        transform="translate(100 100)" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="footer">
+                    <h3 class="footer-name">Mohamed Ashraf</h3>
+                    <p class="footer-subtitle">© 2025 Designed with love, All rights reserved for Mohamed Ashraf</p>
+
+                    <div class="social-icons">
+                        <a href="mailto:mohamed.7beisha@gmail.com" class="icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <g>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.75C5.38503 2.75 3.92465 3.15363 2.86466 4.1379C1.79462 5.13152 1.25 6.60705 1.25 8.5V15.5C1.25 17.393 1.79462 18.8685 2.86466 19.8621C3.92465 20.8464 5.38503 21.25 7 21.25H17C18.615 21.25 20.0754 20.8464 21.1353 19.8621C22.2054 18.8685 22.75 17.393 22.75 15.5V8.5C22.75 6.60705 22.2054 5.13152 21.1353 4.1379C20.0754 3.15363 18.615 2.75 17 2.75H7ZM19.2285 8.3623C19.5562 8.10904 19.6166 7.63802 19.3633 7.31026C19.1101 6.98249 18.6391 6.9221 18.3113 7.17537L12.7642 11.4616C12.3141 11.8095 11.6858 11.8095 11.2356 11.4616L5.6886 7.17537C5.36083 6.9221 4.88982 6.98249 4.63655 7.31026C4.38328 7.63802 4.44367 8.10904 4.77144 8.3623L10.3185 12.6486C11.3089 13.4138 12.691 13.4138 13.6814 12.6486L19.2285 8.3623Z"></path>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mohamed-ashraf-a5a6b3358/" class="icon">
+                            <svg viewBox="0 0 32 32">
+                                <path d="M23,0H9C4,0,0,4,0,9v14c0,5,4,9,9,9h14c5,0,9-4,9-9V9C32,4,28,0,23,0z M12,25c0,0.6-0.4,1-1,1H7c-0.6,0-1-0.4-1-1V13
+                                c0-0.6,0.4-1,1-1h4c0.6,0,1,0.4,1,1V25z M9,11c-1.7,0-3-1.3-3-3s1.3-3,3-3s3,1.3,3,3S10.7,11,9,11z M26,25c0,0.6-0.4,1-1,1h-3
+                                c-0.6,0-1-0.4-1-1v-3.5v-1v-2c0-0.8-0.7-1.5-1.5-1.5S18,17.7,18,18.5v2v1V25c0,0.6-0.4,1-1,1h-3c-0.6,0-1-0.4-1-1V13
+                                c0-0.6,0.4-1,1-1h4c0.3,0,0.5,0.1,0.7,0.3c0.6-0.2,1.2-0.3,1.8-0.3c3,0,5.5,2.5,5.5,5.5V25z" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/mohamed7beisha" class="icon">
+                            <svg viewBox="0 0 20 20">
+                                <path d="M10 0C4.477 0 0 4.59 0 10.253c0 4.529 2.862 8.371 6.833 9.728.507.101.687-.219.687-.492
+                                0-.339-.012-1.444-.012-2.815C5 17.295 4.774 16.5 4.774 16.5c-.456-1.208-1.112-1.531-1.112-1.531-.911-.63.067-.618.067-.618
+                                1.008.071 1.538 1.058 1.538 1.058.896 1.566 2.355 1.114 2.93.852.091-.657.35-1.113.636-1.37-2.22-.253-4.555-1.128-4.555-5.027
+                                0-1.109.384-2.014 1.014-2.722-.102-.253-.441-1.276.096-2.655 0 0 .833-.27 2.732 1.037.792-.221 1.642-.331 2.488-.335.846.004
+                                1.696.114 2.489.335 1.897-1.307 2.729-1.037 2.729-1.037.54 1.379.202 2.402.099 2.655.632.708 1.014 1.613 1.014 2.722
+                                0 3.907-2.339 4.771-4.567 5.019.359.31.68.919.68 1.854 0 1.339-.012 2.422-.012 2.749 0 .276.18.597.688.493
+                                3.969-1.356 6.83-5.198 6.83-9.727C20 4.59 15.523 0 10 0z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/qr/6DBDGPZUEDWON1" class="icon">
+                            <svg viewBox="0 0 32 32">
+                                <path d="M17,0C8.7,0,2,6.7,2,15c0,3.4,1.1,6.6,3.2,9.2l-2.1,6.4c-0.1,0.4,0,0.8,0.3,1.1C3.5,31.9,3.8,32,4,32
+                                c0.1,0,0.3,0,0.4-0.1l6.9-3.1C13.1,29.6,15,30,17,30c8.3,0,15-6.7,15-15S25.3,0,17,0z M25.7,20.5c-0.4,1.2-1.9,2.2-3.2,2.4
+                                C22.2,23,21.9,23,21.5,23c-0.8,0-2-0.2-4.1-1.1c-2.4-1-4.8-3.1-6.7-5.8L10.7,16C10.1,15.1,9,13.4,9,11.6c0-2.2,1.1-3.3,1.5-3.8
+                                c0.5-0.5,1.2-0.8,2-0.8c0.2,0,0.3,0,0.5,0c0.7,0,1.2,0.2,1.7,1.2l0.4,0.8c0.3,0.8,0.7,1.7,0.8,1.8c0.3,0.6,0.3,1.1,0,1.6
+                                c-0.1,0.3-0.3,0.5-0.5,0.7c-0.1,0.2-0.2,0.3-0.3,0.3c-0.1,0.1-0.1,0.1-0.2,0.2c0.3,0.5,0.9,1.4,1.7,2.1c1.2,1.1,2.1,1.4,2.6,1.6l0,0
+                                c0.2-0.2,0.4-0.6,0.7-0.9l0.1-0.2c0.5-0.7,1.3-0.9,2.1-0.6c0.4,0.2,2.6,1.2,2.6,1.2l0.2,0.1c0.3,0.2,0.7,0.3,0.9,0.7
+                                C26.2,18.5,25.9,19.8,25.7,20.5z" />
+                            </svg>
+                        </a>
+                    </div>
+                </footer>
+            </section>
+
+        </main>
+
+        <script src="main.js" defer></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TJJVEW3PS"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-8TJJVEW3PS');
+        </script>
+    </body>
+</html>
